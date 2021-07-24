@@ -1,20 +1,12 @@
-terraform {
-  required_providers {
-    google = {
-      source = "hashicorp/google"
-      version = "3.76.0"
-    }
-  }
-}
 
 provider "google" {
-  credentials = file("mydemoproject-316509-675aa88cefb3.json")
+  credentials = file("~/Downloads/terraform-gcp-320716-cc4f20273242.json")
 
-  project = "mydemoproject"
+  project = "terraform-gcp"
   region  = "asia-south1"
-  zone    = "asia-south1-c"
 }
 
-resource "google_compute_network" "vpc_network" {
-  name = "terraform-network"
+resource "google_compute_network" "main" {
+  name = "main"
 }
+	
