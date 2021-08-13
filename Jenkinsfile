@@ -5,11 +5,9 @@ pipeline {
     
     environment {
         PROJECT_ID = 'terraform-gcp-320716'
-        CREDENTIALS_ID = 'gcp_creds'
+        CREDENTIALS_ID = 'terraform-gcp-320716'
     }
-    withCredentials([file(credentialsId: 'key-sa', variable: 'gcp_creds')]) {
-    sh("gcloud auth activate-service-account --key-file=${gcp_creds}")
-    }
+
     agent {label 'slave-01'}
 
     stages {
