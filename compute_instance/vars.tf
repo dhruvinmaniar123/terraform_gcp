@@ -6,7 +6,7 @@ variable "region" {
 }
 
 variable "zone" {
-  default = "asia-south1-b"
+  default = "asia-south1-a"
 }
 
 variable "name_count" {
